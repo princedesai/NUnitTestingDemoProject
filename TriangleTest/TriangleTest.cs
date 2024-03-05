@@ -17,6 +17,16 @@ namespace TriangleTest
                 string actual=Triangle.ValidTriangle(firstAngle, secondAngle, thirdAngle);
                 Assert.That(actual, Is.EqualTo(expected));
             }
+            [Test]
+            public void InvalidTriangle_Input90and90and90_OutputInvalidTriangle()
+            {
+                int firstAngle = 90;
+                int secondAngle = 90;
+                int thirdAngle = 90;
+                string expected = "The triangle is NOT valid.";
+                string actual=Triangle.ValidTriangle(firstAngle,secondAngle, thirdAngle);
+                Assert.That(actual,Is.EqualTo(expected));
+            }
         }
 
 
